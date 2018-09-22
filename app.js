@@ -15,6 +15,13 @@ function sum(a, b) { //eslint-disable-line
   return returnArray;
 }
 
+sum.prototype.three = function(a, b, c) {
+  var summed = a + b + c;
+  var concatenatedSum = a + ' and ' + b + ' and ' + c + ' sum to ' + summed + '.';
+  var returnArray = [summed, concatenatedSum];
+  return returnArray;
+};
+
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -36,6 +43,13 @@ function multiply(a, b) { //eslint-disable-line
   return returnArray;
 }
 
+multiply.prototype.three = function(a, b, c) {
+  var multipled = a * b * c;
+  var concatenated = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multipled + '.';
+  var returnArray = [multipled, concatenated];
+  return returnArray;
+};
+
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
 
@@ -54,13 +68,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var summed = a + b + c;
-  var concatenatedSum = a + ' and ' + b + ' and ' + c + ' sum to ' + summed + '.';
+  var sumArray = sum.prototype.three(a, b, c);
+  var multiplyArray = multiply.prototype.three(a, b, c);
 
-  var multipled = a * b * c;
-  var concatenatedProduct = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multipled + '.';
+  // Combine arrays
+  var returnArray = [sumArray[0], multiplyArray[0], sumArray[1], multiplyArray[1]];
 
-  var returnArray = [summed, multipled, concatenatedSum, concatenatedProduct];
   return returnArray;
 }
 
