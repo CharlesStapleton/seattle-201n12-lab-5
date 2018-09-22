@@ -73,26 +73,8 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 
   // Combine arrays
   var returnArray = [sumArray[0], multiplyArray[0], sumArray[1], multiplyArray[1]];
-
   return returnArray;
 }
-
-// function sumAndMultiply(a, b, c) { //eslint-disable-line
-//   var sumMult = [];
-//   var sumFirst = sum(a, b)[0];
-//   sumFirst = sum(sumFirst, c)[0];
-//   // console.log(sumFirst);
-
-//   var multFirst = multiply(a, b)[0];
-//   multFirst = multiply(multFirst, c)[0];
-//   // console.log(multFirst);
-
-//   var sumString = a + ' and ' + b + ' and ' + c + ' sum to ' + sumFirst + '.';
-//   var multString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multFirst + '.';
-  
-//   sumMult.push(sumFirst, multFirst, sumString, multString);
-//   return sumMult;
-// }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
@@ -122,6 +104,7 @@ function sumArray(testArray) { //eslint-disable-line
   // console.log(sumNumbers[0]);
   // console.log(sumArrayString);
 
+  // Combine arrays
   var sumArrayAnswer = [sumNumbers[0], sumArrayString];
   return sumArrayAnswer;
 }
@@ -150,6 +133,7 @@ function multiplyArray(testArray) { //eslint-disable-line
   // console.log(multNumbers[0]);
   // console.log(multArrayString);
 
+  // Combine arrays
   var sumArrayAnswer = [multNumbers[0], multArrayString];
   return sumArrayAnswer;
 }
